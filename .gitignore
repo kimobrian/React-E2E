@@ -25,3 +25,5 @@ yarn-error.log*
 
 # Styles
 src/**/*.css
+
+applitools.config.js

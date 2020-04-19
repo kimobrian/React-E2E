@@ -53,17 +53,22 @@
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "cypress": "npx cypress open",
+    "ci": "start-server-and-test start-js http://localhost:3000 cypress"
   },
   "devDependencies": {
+    "@applitools/eyes.cypress": "^3.4.11",
     "babel-eslint": "^7.2.3",
+    "cypress": "^4.4.0",
     "eslint": "^4.18.2",
     "eslint-config-react-app": "^1.0.5",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-flowtype": "^2.33.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^5.0.1",
-    "eslint-plugin-react": "^7.0.1"
+    "eslint-plugin-react": "^7.0.1",
+    "start-server-and-test": "^1.11.0"
   },
   "jest": {
     "collectCoverageFrom": [
